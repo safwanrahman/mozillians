@@ -53,7 +53,7 @@ cfg = {
 }
 
 for key, value in settings.LOGGING.items():
-    cfg[key].update(value)
+    cfg[key]
 
 # Set the level and handlers for all loggers.
 for logger in cfg['loggers'].values() + [cfg['root']]:
