@@ -174,8 +174,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'session_csrf.context_processor',
     'django.contrib.messages.context_processors.messages',
-    'funfactory.context_processors.i18n',
-    'funfactory.context_processors.globals',
+    'mozillians.common.context_processors.i18n',
+    'mozillians.common.context_processors.globals',
     'mozillians.common.context_processors.current_year',
     'mozillians.common.context_processors.canonical_path'
 )
@@ -205,7 +205,7 @@ def COMPRESS_JINJA2_GET_ENVIRONMENT():
 
 
 MIDDLEWARE_CLASSES = (
-    'mozillians.settings.middleware.LocaleURLMiddleware',
+    'mozillians.common.middleware.LocaleURLMiddleware',
     'multidb.middleware.PinningRouterMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

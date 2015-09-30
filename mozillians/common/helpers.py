@@ -10,14 +10,13 @@ from django.utils.safestring import mark_safe
 import bleach
 import markdown as markdown_module
 from funfactory.helpers import urlparams
-from funfactory.urlresolvers import reverse
-from funfactory import utils
 from jingo import register
 from jinja2 import Markup, contextfunction
 from pytz import timezone, utc
 from sorl.thumbnail import get_thumbnail
 from tower import ugettext as _
-
+from mozillians.common import utils
+from mozillians.settings.urlresolvers import reverse
 
 GRAVATAR_URL = 'https://secure.gravatar.com/avatar/{emaildigest}'
 
